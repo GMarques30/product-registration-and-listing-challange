@@ -28,7 +28,7 @@ export class Product extends Entity<ProductProps> {
   }
 
   get price() {
-    return this.props.price
+    return this.props.price.toFixed(2)
   }
 
   get isAvaliableForSale() {
