@@ -11,4 +11,4 @@ Desafio de cadastro e listagem de produtos
 - price: number(toFixed(2))
 - isAvaliableForSale: boolean
 
-[] Deve ser possível listar todos os produtos
+[x] Deve ser possível listar todos os produtos

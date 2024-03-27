@@ -19,8 +19,6 @@ describe('Create Product Use Case', () => {
       isAvaliableForSale: true
     })
 
-    console.log(result.value?.product.price)
-
     expect(result.isRight()).toBe(true)
     expect(result.value).toEqual(
       expect.objectContaining({
