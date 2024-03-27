@@ -4,7 +4,7 @@ Desafio de cadastro e listagem de produtos
 
 ## Requisitos funcionais
 
-[] Deve ser possível criar um produto, com as seguintes propriedades:
+[x] Deve ser possível criar um produto, com as seguintes propriedades:
 
 - name: string
 - description: string

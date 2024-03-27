@@ -15,9 +15,11 @@ describe('Create Product Use Case', () => {
     const result = await sut.execute({
       name: 'New product',
       description: 'New product description',
-      price: 9.99,
+      price: 10.99,
       isAvaliableForSale: true
     })
+
+    console.log(result.value?.product.price)
 
     expect(result.isRight()).toBe(true)
     expect(result.value).toEqual(
@@ -25,7 +27,7 @@ describe('Create Product Use Case', () => {
         product: expect.objectContaining({
           name: 'New product',
           description: 'New product description',
-          price: 9.99,
+          price: 10.99,
           isAvaliableForSale: true
         })
       })
