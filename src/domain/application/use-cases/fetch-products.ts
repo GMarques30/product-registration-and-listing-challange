@@ -1,6 +1,7 @@
 import { Either, right } from 'src/core/either'
 import { ProductRepository } from '../repositories/product-repository'
 import { Product } from 'src/domain/entities/product'
+import { Injectable } from '@nestjs/common'
 
 type FetchProductOutput = Either<
   null,
@@ -9,6 +10,7 @@ type FetchProductOutput = Either<
   }
 >
 
+@Injectable()
 export class FetchProductsUseCase {
   constructor(private readonly productRepository: ProductRepository) {}
 
