@@ -24,14 +24,22 @@ describe('Fetch Products Controller (E2E)', () => {
   test('[GET] /products', async () => {
     await Promise.all([
       productFactory.makePrismaProduct({
-        name: 'Product-1'
+        name: 'Product-1',
+        price: 1.99
       }),
       productFactory.makePrismaProduct({
-        name: 'Product-2'
+        name: 'Product-2',
+        price: 2.99
+      }),
+      productFactory.makePrismaProduct({
+        name: 'Product-3',
+        price: 0.99
       })
     ])
 
     const response = await request(app.getHttpServer()).get('/products').send()
+
+    console.log(response.body)
 
     expect(response.statusCode).toBe(200)
     expect(response.body).toEqual({
@@ -41,6 +49,9 @@ describe('Fetch Products Controller (E2E)', () => {
         }),
         expect.objectContaining({
           name: 'Product-2'
+        }),
+        expect.objectContaining({
+          name: 'Product-3'
         })
       ])
     })
