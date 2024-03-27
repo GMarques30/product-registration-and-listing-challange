@@ -1,15 +1,15 @@
 import { ProductRepository } from 'src/domain/application/repositories/product-repository'
 import { makeProduct } from 'test/factories/make-product'
 import { InMemoryProductRepository } from 'test/repositories/in-memory-product-repository'
-import { FetchProductUseCase } from './fetch-products'
+import { FetchProductsUseCase } from './fetch-products'
 
 describe('Fetch Product Use Case', () => {
   let productRepository: ProductRepository
-  let sut: FetchProductUseCase
+  let sut: FetchProductsUseCase
 
   beforeEach(() => {
     productRepository = new InMemoryProductRepository()
-    sut = new FetchProductUseCase(productRepository)
+    sut = new FetchProductsUseCase(productRepository)
   })
 
   it('should be able to search for all products', async () => {

@@ -9,7 +9,7 @@ type FetchProductOutput = Either<
   }
 >
 
-export class FetchProductUseCase {
+export class FetchProductsUseCase {
   constructor(private readonly productRepository: ProductRepository) {}
 
   async execute(): Promise<FetchProductOutput> {

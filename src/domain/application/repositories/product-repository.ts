@@ -1,6 +1,6 @@
 import { Product } from 'src/domain/entities/product'
 
-export interface ProductRepository {
-  create(product: Product): Promise<void>
-  findMany(): Promise<Product[]>
+export abstract class ProductRepository {
+  abstract create(product: Product): Promise<void>
+  abstract findMany(): Promise<Product[]>
 }

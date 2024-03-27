@@ -1,7 +1,7 @@
 import { config } from 'dotenv'
 import { execSync } from 'node:child_process'
 import { randomUUID } from 'node:crypto'
-import { PrismaService } from 'src/infra/database/prisma/prisma-service'
+import { PrismaService } from 'src/infra/database/prisma/prisma.service'
 import { envSchema } from 'src/infra/env/env'
 
 config({
